@@ -2,6 +2,25 @@
   "name": "palzone",
   "version": "0.1.0",
   "private": true,
+  "description": "",
+  "main": "./public/index.html",
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "javascript",
+    "react",
+    "redux",
+    "bulma",
+    "axios"
+  ],
+  "contributors": [
+    "Claudia Ligidakis <claudialigidakis@gmail.com>",
+    "Mark Pavlovski <markpavlovski@gmail.com>",
+    "Vikanda Gonzales <vikanda.gonzales@gmail.com>",
+    "Wendy Parsons <wsparsons@gmail.com>"
+  ],
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.6.3",
