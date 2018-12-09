@@ -8,7 +8,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Nav from './components/Nav';
 
 // CONTAINERS
-// import Login from './containers/Login';
+import Map from './containers/Map';
 import List from './containers/List';
 import Profile from './containers/Profile';
 import LocationPage from './containers/LocationPage';
@@ -21,9 +21,9 @@ class Main extends React.Component {
       <BrowserRouter>
           <div>           
             <Switch>
-              {/* {/* <Route exact path="/" component={() => <Redirect to="/login" />} /> */}
-              {/* <Route path="/login" component={Login} /> */}
-              <Route path="/main/list" component={List} /> */}
+              <Route exact path="/main" component={() => <Redirect to="/main/map" />} />
+              <Route path="/main/map" component={Map} />
+              <Route path="/main/list" component={List} />
               <Route path="/main/profile" component={Profile} />
               <Route path="/main/location-page" component={LocationPage} />
             </Switch>

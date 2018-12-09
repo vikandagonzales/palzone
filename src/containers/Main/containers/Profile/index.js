@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 
 class Profile extends React.Component {
   logout = event => {
-    this.props.logout(this.props.history);
+  //  this.props.logout(this.props.history);
   };
 
   render () {

@@ -47,8 +47,8 @@ class Login extends React.Component {
                           onChange={event => this.setState({email: event.target.value})}
                           required
                         />
-                        <span class="icon is-large is-left">
-                          <i class="fas fa-envelope"></i>
+                        <span className="icon is-large is-left">
+                          <i className="fas fa-envelope"></i>
                         </span>
                       </p>
                     </div>
@@ -63,8 +63,8 @@ class Login extends React.Component {
                           onChange={event => this.setState({password: event.target.value})}
                           required
                         />
-                        <span class="icon is-large is-left">
-                          <i class="fas fa-lock"></i>
+                        <span className="icon is-large is-left">
+                          <i className="fas fa-lock"></i>
                         </span>
                       </p>           
                     </div>
