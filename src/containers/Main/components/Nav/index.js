@@ -71,17 +71,17 @@ class Nav extends React.Component {
       <nav className="navbar is-fixed-bottom">        
         <div className="columns is-mobile">
           <div className="column">
-            <Link className={this.state.mapClasses} to="/map" onClick={() => {this.toggle('map')}}>
+            <Link className={this.state.mapClasses} to="/main/map" onClick={() => {this.toggle('map')}}>
               <span className="lnr lnr-map2"></span>
             </Link>
           </div>
           <div className="column">
-            <Link className={this.state.listClasses} to="/list" onClick={() => {this.toggle('list')}}>
+            <Link className={this.state.listClasses} to="/main/list" onClick={() => {this.toggle('list')}}>
               <span className="lnr lnr-list"></span>
             </Link>
           </div>
           <div className="column">
-            <Link className={this.state.profileClasses} to="/profile" onClick={() => {this.toggle('profile')}}>
+            <Link className={this.state.profileClasses} to="/main/profile" onClick={() => {this.toggle('profile')}}>
               <span className="lnr lnr-user"></span>
             </Link>
           </div>         

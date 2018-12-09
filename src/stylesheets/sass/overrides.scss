@@ -8,3 +8,8 @@ $navbar-item-img-max-height: 2.75rem;
 
 // FORM
 $control-radius: 0;
+
+// MISC
+a.navbar-item.is-active:not(:hover), .navbar-link.is-active:not(:hover) {
+  background-color: darken($crimson, 5%) !important;
+}

@@ -18,6 +18,7 @@
   
     &.is-active {
       background-color: darken($crimson, 5%);
+      color: $white;
       
       .lnr {
         font-size: 50px;
@@ -27,5 +28,20 @@
     .lnr {
       font-size: 35px;
     }
+  }
+}
+
+#profile {
+  .is-fullheight {
+    min-height: calc(100vh - 6rem);
+  }
+
+  img {
+    border-radius: 50%;
+    border: 5px solid $champagne;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin: auto;
   }
 }

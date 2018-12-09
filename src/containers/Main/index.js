@@ -10,7 +10,7 @@ import Nav from './components/Nav';
 // CONTAINERS
 // import Login from './containers/Login';
 // import Signup from './containers/Signup';
-// import Settings from './containers/Settings';
+import Profile from './containers/Profile';
 
 // ==========
 
@@ -18,15 +18,13 @@ class Main extends React.Component {
   render () {
     return (
       <BrowserRouter>
-          <div>
-            placeholder
-            {/* <Header />
+          <div>           
             <Switch>
-              <Route exact path="/" component={() => <Redirect to="/login" />} />
+              {/* <Route exact path="/" component={() => <Redirect to="/login" />} />
               <Route path="/login" component={Login} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/settings" component={Settings} />
-            </Switch> */}
+              <Route path="/signup" component={Signup} /> */}
+              <Route path="/main/profile" component={Profile} />
+            </Switch>
             <Nav />
           </div>
         </BrowserRouter>

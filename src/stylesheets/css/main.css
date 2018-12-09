@@ -1,3 +1,6 @@
+a.navbar-item.is-active:not(:hover), .navbar-link.is-active:not(:hover) {
+  background-color: #c32d58 !important; }
+
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -4758,8 +4761,7 @@ a.navbar-item,
   a.navbar-item.is-active,
   .navbar-link.is-active {
     color: #0a0a0a; }
-  a.navbar-item.is-active:not(:hover),
-  .navbar-link.is-active:not(:hover) {
+  a.navbar-item.is-active:not(:hover), .navbar-link.is-active:not(:hover) {
     background-color: transparent; }
   .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
     background-color: #d64e74; } }
@@ -6761,11 +6763,23 @@ label.panel-block {
   height: 100%;
   width: 100%; }
   .navbar .navbar-item.is-active {
-    background-color: #c32d58; }
+    background-color: #c32d58;
+    color: white; }
     .navbar .navbar-item.is-active .lnr {
       font-size: 50px; }
   .navbar .navbar-item .lnr {
     font-size: 35px; }
+
+#profile .is-fullheight {
+  min-height: calc(100vh - 6rem); }
+
+#profile img {
+  border-radius: 50%;
+  border: 5px solid #dfced2;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  margin: auto; }
 
 .has-margin-top {
   margin-top: 1rem; }
