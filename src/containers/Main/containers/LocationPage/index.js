@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 // import { logout } from '../../state/actions/auth';
 
 // COMPONENTS
-import Offer from './components/Offer';
+// import Offer from './components/Offer';
 import Review from './components/Review';
 
 // ==========
@@ -38,15 +38,16 @@ class LocationPage extends React.Component {
                       <i className="far fa-star"></i>
                     </div>
                   </div>
-                  <div className="has-padding-top has-padding-bottom">
+                  {/* <div className="has-padding-top has-padding-bottom">
                     <p className="location-header"><span className="lnr lnr-tag"></span>Offers</p>
                     <Offer />
-                  </div>
+                  </div> */}
                   <div className="has-padding-top has-padding-bottom">
                     <p className="location-header has-margin-bottom"><span className="lnr lnr-cash-dollar"></span>Tipping Etiquette</p>
                     <p>
                       Adasd asda sd a sd asd a d asd a sd asdad adsad fgvfvbxc aasfqweq zxvzxcz asdasd qweqweq asdad.
                     </p>
+                    <p className="help is-primary has-text-right">View translation</p>
                   </div>
                   <div className="has-padding-top">
                     <p className="location-header"><span className="lnr lnr-quote-open"></span>Reviews</p>

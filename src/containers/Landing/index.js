@@ -18,8 +18,9 @@ class Landing extends React.Component {
                   <figure className="image has-padding-bottom">
                     <img src="./assets/logo-white.svg" alt="Palzone" />
                   </figure>
-                  <Link to="/login" className="button is-large is-fullwidth has-margin-top">Log In</Link>
-                  <Link to="/signup" className="button is-large is-fullwidth has-margin-top">Sign Up</Link>
+                  <Link to="/main" className="button is-large is-fullwidth has-margin-top">Explore</Link>
+                  {/* <Link to="/login" className="button is-large is-fullwidth has-margin-top">Log In</Link>
+                  <Link to="/signup" className="button is-large is-fullwidth has-margin-top">Sign Up</Link> */}
                 </div>
               </div>
             </div>   
