@@ -1,36 +1,36 @@
-import React, { Component } from "react";
-import { Switch, Route, Redirect, withRouter } from "react-router-dom";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { verify } from "./actions/auth.actions";
+// REACT
+import React from 'react';
 
-const mapStateToProps = ({ auth }) => ({ auth });
+// ROUTER
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ verify }, dispatch);
+// COMPONENTS
+// import Header from './components/Header';
+
+// CONTAINERS
+// import Login from './containers/Login';
+// import Signup from './containers/Signup';
+// import Settings from './containers/Settings';
+
+// ==========
+
+class App extends React.Component {
+  render () {
+    return (
+      <BrowserRouter>
+          <div>
+            placeholder
+            {/* <Header />
+            <Switch>
+              <Route exact path="/" component={() => <Redirect to="/login" />} />
+              <Route path="/login" component={Login} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/settings" component={Settings} />
+            </Switch> */}
+          </div>
+        </BrowserRouter>
+    );
+  };
 };
 
-class App extends Component {
-
-  componentDidMount = () => {
-    this.props.verify()
-  }
-
-  render() {
-    return (
-      <div>
-        <h1>Palzone</h1>
-        <Switch>
-          <Route exact path="/login" />
-        </Switch>
-      </div>
-    );
-  }
-}
-
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(App)
-);
+export default App;
