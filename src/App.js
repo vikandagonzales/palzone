@@ -1,28 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { verify } from "./actions/auth.actions";
+
+const mapStateToProps = ({ auth }) => ({ auth });
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ verify }, dispatch);
+};
 
 class App extends Component {
+
+  componentDidMount = () => {
+    this.props.verify()
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <h1>Palzone</h1>
+        <Switch>
+          <Route exact path="/login" />
+        </Switch>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);
