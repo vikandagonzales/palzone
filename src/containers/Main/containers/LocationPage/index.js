@@ -38,7 +38,8 @@ class LocationPage extends React.Component {
   };
 
   translate = event => {
-
+    event.preventDefault();
+    // this.props.postTranslation(text, language);
   }
 
   render () {

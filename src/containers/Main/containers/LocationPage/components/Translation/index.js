@@ -14,10 +14,9 @@ class Translation extends React.Component {
   }
 
   render () {
-    console.log(this.props.languages)
     return (
       <div className="translation">
-        <form className="has-text-centered" onSubmit={this.translate}>
+        <form className="has-text-centered" onSubmit={event => {this.props.translate(event)}}>
           <div className="control has-margin-bottom">
             <div className="select">
               <select>
@@ -25,7 +24,7 @@ class Translation extends React.Component {
                 {
                   this.props.languages.map((language, i) => {
                     return (
-                      <option key={i}>{language}</option>
+                      <option key={i} value={language}>{language}</option>
                     );
                   })
                 }
