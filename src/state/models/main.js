@@ -2,7 +2,7 @@ import request from '../../helpers/request';
 
 class Main {
   static getLocations = async () => {
-    const response = await request(`/locations`);
+    const response = await request(`/locations?lat=34&lng=-118`);
     return response.data.data;
   };
 
