@@ -5,7 +5,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 // COMPONENTS
-// import Header from './components/Header';
+import Nav from './components/Nav';
 
 // CONTAINERS
 // import Login from './containers/Login';
@@ -27,6 +27,7 @@ class Main extends React.Component {
               <Route path="/signup" component={Signup} />
               <Route path="/settings" component={Settings} />
             </Switch> */}
+            <Nav />
           </div>
         </BrowserRouter>
     );

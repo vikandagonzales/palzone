@@ -1,0 +1,31 @@
+.navbar {
+  .columns {
+    width: 100%;
+    height: 6rem;
+    margin: 0;
+  }
+
+  .column {
+    padding: 0;
+  }
+
+  .navbar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  
+    &.is-active {
+      background-color: darken($crimson, 5%);
+      
+      .lnr {
+        font-size: 50px;
+      }
+    }
+  
+    .lnr {
+      font-size: 35px;
+    }
+  }
+}

@@ -8,7 +8,7 @@ import store from './store';
 
 // CSS
 import './stylesheets/css/main.css';
-//import './css/linearicons.css';
+import './stylesheets/css/linearicons.css';
 
 // COMPONENTS
 import App from './App';
