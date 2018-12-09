@@ -10,6 +10,11 @@ import {
 } from 'google-maps-react';
 // ==========
 
+// REDUX
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { getLocations } from '../../../../../../state/actions/main';
+
 const mapStyles = {
   width: '100%',
   height: '100vh',
@@ -18,6 +23,10 @@ const mapStyles = {
 
 
 export class GoogleMap extends Component {
+  componentDidMount () {
+    this.props.getLocations();
+  };
+
   state = {
     showingInfoWindow: false, //Hides or the shows the infoWindow
     activeMarker: {}, //Shows the active marker upon click
@@ -41,12 +50,13 @@ export class GoogleMap extends Component {
   };
 
   render() {
+      console.log(this.props.locations)
     return (
       <Map
       google = {this.props.google}
       zoom = {14}
       style = {mapStyles}
-      initialCenter = {{lat: -1.2884, lng: 36.8233}}>
+      initialCenter = {{lat: 34.052235, lng: -118.243683}}>
       <Marker onClick = {this.onMarkerClick}
         name = {'Kenyatta International Convention Centre'}/>
         <InfoWindow
@@ -67,7 +77,18 @@ export class GoogleMap extends Component {
       );
     }
   }
+  const mapStateToProps = state => ({
+    locations: state.main.locations
+  });
+
+
+  const mapDispatchToProps = dispatch => bindActionCreators({
+    getLocations
+  }, dispatch);
+
+
+  const connectAppToRedux = connect(mapStateToProps, mapDispatchToProps)(GoogleMap);
 
   export default GoogleApiWrapper({
-    apiKey: "AIzaSyBLOzpDqAPSq80lWCyocBjN7SX4yL2mf1I"
-  })(GoogleMap);
+    apiKey: "AIzaSyBLOzpDqAPSq80lWCyocBjN7SX4yL2mf1I",
+  })(connectAppToRedux);
