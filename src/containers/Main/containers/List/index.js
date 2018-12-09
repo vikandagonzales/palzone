@@ -1,6 +1,9 @@
 // REACT
 import React from 'react';
 
+// ROUTER
+import { Link } from 'react-router-dom';
+
 // REDUX
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -22,13 +25,16 @@ class List extends React.Component {
                 <div className="column is-4 is-offset-4">
                   <ul>
                     <li>
-                      <LocationSummary />
-                      <LocationSummary />
-                      <LocationSummary />
-                      <LocationSummary />
-                      <LocationSummary />
-                      <LocationSummary />
-                      <LocationSummary />
+                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
+                    </li>
+                    <li>
+                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
+                    </li>
+                    <li>
+                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
+                    </li>
+                    <li>
+                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
                     </li>
                   </ul>
                 </div>

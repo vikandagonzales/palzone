@@ -6770,7 +6770,7 @@ label.panel-block {
   .navbar .navbar-item .lnr {
     font-size: 35px; }
 
-#profile .is-fullheight, #list .is-fullheight {
+#profile .is-fullheight, #list .is-fullheight, .location-page .is-fullheight {
   min-height: calc(100vh - 6rem);
   height: calc(100vh - 6rem);
   overflow: auto; }
@@ -6788,27 +6788,55 @@ label.panel-block {
 #list .hero-body {
   align-items: flex-start; }
 
+#list li:not(:last-child) {
+  border-bottom: 1px solid #dbdbdb; }
+
 #list .location-summary {
   padding: 1rem; }
-  #list .location-summary:not(:last-child) {
-    border-bottom: 1px solid #dbdbdb; }
 
 #list img {
   width: 75px;
   height: 75px; }
-
-#list .discover-icon {
-  color: #b5b5b5;
-  font-weight: 400; }
-
-#list .title {
-  margin-bottom: .25rem; }
 
 #list .location-info {
   display: flex;
   align-items: center; }
   #list .location-info > div {
     width: 100%; }
+
+#list .discover-icon, .location-page .discover-icon {
+  color: #b5b5b5;
+  font-weight: 400; }
+
+#list .title, .location-page .title {
+  margin-bottom: .25rem; }
+
+.location-page .location-info {
+  padding: 2rem; }
+
+.location-page .location-header {
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 2px solid #dfced2; }
+
+.location-page .lnr {
+  color: #d38b9f;
+  margin-right: .5rem; }
+
+.review {
+  padding: 1.5rem 0; }
+  .review i {
+    font-size: .8rem; }
+  .review .subtitle {
+    color: #7a7a7a !important;
+    text-transform: uppercase;
+    margin-bottom: .5rem; }
+
+.review:not(:last-child) {
+  border-bottom: 1px dotted #b5b5b5; }
+
+.pointer {
+  cursor: pointer; }
 
 .has-margin-top {
   margin-top: 1rem; }
