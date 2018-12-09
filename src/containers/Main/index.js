@@ -9,7 +9,7 @@ import Nav from './components/Nav';
 
 // CONTAINERS
 // import Login from './containers/Login';
-// import Signup from './containers/Signup';
+import List from './containers/List';
 import Profile from './containers/Profile';
 
 // ==========
@@ -20,9 +20,9 @@ class Main extends React.Component {
       <BrowserRouter>
           <div>           
             <Switch>
-              {/* <Route exact path="/" component={() => <Redirect to="/login" />} />
-              <Route path="/login" component={Login} />
-              <Route path="/signup" component={Signup} /> */}
+              {/* {/* <Route exact path="/" component={() => <Redirect to="/login" />} /> */}
+              {/* <Route path="/login" component={Login} /> */}
+              <Route path="/main/list" component={List} /> */}
               <Route path="/main/profile" component={Profile} />
             </Switch>
             <Nav />

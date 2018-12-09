@@ -6770,16 +6770,45 @@ label.panel-block {
   .navbar .navbar-item .lnr {
     font-size: 35px; }
 
-#profile .is-fullheight {
-  min-height: calc(100vh - 6rem); }
+#profile .is-fullheight, #list .is-fullheight {
+  min-height: calc(100vh - 6rem);
+  height: calc(100vh - 6rem);
+  overflow: auto; }
 
-#profile img {
+#profile img, #list img {
   border-radius: 50%;
   border: 5px solid #dfced2;
   object-fit: cover;
-  width: 200px;
-  height: 200px;
   margin: auto; }
+
+#profile img {
+  width: 200px;
+  height: 200px; }
+
+#list .hero-body {
+  align-items: flex-start; }
+
+#list .location-summary {
+  padding: 1rem; }
+  #list .location-summary:not(:last-child) {
+    border-bottom: 1px solid #dbdbdb; }
+
+#list img {
+  width: 75px;
+  height: 75px; }
+
+#list .discover-icon {
+  color: #b5b5b5;
+  font-weight: 400; }
+
+#list .title {
+  margin-bottom: .25rem; }
+
+#list .location-info {
+  display: flex;
+  align-items: center; }
+  #list .location-info > div {
+    width: 100%; }
 
 .has-margin-top {
   margin-top: 1rem; }
@@ -6787,8 +6816,20 @@ label.panel-block {
 .has-margin-bottom {
   margin-bottom: 1rem; }
 
+.has-margin-left {
+  margin-left: 1rem; }
+
+.has-margin-right {
+  margin-right: 1rem; }
+
 .has-padding-top {
   padding-top: 1.5rem; }
 
 .has-padding-bottom {
   padding-bottom: 1.5rem; }
+
+.has-padding-left {
+  padding-left: 1.5rem; }
+
+.has-padding-right {
+  padding-right: 1.5rem; }

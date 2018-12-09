@@ -31,17 +31,60 @@
   }
 }
 
-#profile {
+#profile, #list {
   .is-fullheight {
     min-height: calc(100vh - 6rem);
+    height: calc(100vh - 6rem);
+    overflow: auto;
   }
 
   img {
     border-radius: 50%;
     border: 5px solid $champagne;
     object-fit: cover;
-    width: 200px;
-    height: 200px;
+    
     margin: auto;
+  }
+}
+
+#profile img {
+  width: 200px;
+  height: 200px;
+}
+
+#list {
+  .hero-body {
+    align-items: flex-start;
+  }
+
+  .location-summary {
+    padding: 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-lighter;
+    }
+  }
+
+  img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .discover-icon {
+    color: $grey-light;
+    font-weight: 400;
+  }
+
+  .title {
+    margin-bottom: .25rem;
+  }
+
+  .location-info {
+    display: flex;
+    align-items: center;
+
+    >div {
+      width: 100%;
+    }
   }
 }
