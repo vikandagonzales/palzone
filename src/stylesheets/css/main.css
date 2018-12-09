@@ -6775,7 +6775,7 @@ label.panel-block {
   height: calc(100vh - 6rem);
   overflow: auto; }
 
-#profile img, #list img {
+#profile .img-round, #list .img-round {
   border-radius: 50%;
   border: 5px solid #dfced2;
   object-fit: cover;
