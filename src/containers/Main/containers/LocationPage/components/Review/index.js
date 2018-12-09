@@ -17,21 +17,18 @@ class Review extends React.Component {
   };
 
   render () {
+      const {title, review, stars, author} = this.props;
     return (
       <div className="review">
         <div>
-          <span className="title is-5">Nice atmosphere</span>
+          <span className="title is-5">{title}</span>
           <div className="is-pulled-right">
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="far fa-star"></i>
+              {[...new Array(stars)].map(() => <i className="fas fa-star"></i>)}
           </div>
         </div>
-        <p className="subtitle is-7">Nora Mirror</p>
+        <p className="subtitle is-7">{author}</p>
         <p>
-          {this.state.review}
+          {review}
         </p>
         <p className="help is-primary has-text-right pointer" onClick={this.props.toggle} text={this.state.review}>View translation</p>
       </div>
