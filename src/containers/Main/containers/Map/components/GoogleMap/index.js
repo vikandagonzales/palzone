@@ -50,15 +50,37 @@ export class GoogleMap extends Component {
   };
 
   render() {
-      console.log(this.props.locations)
+      const {locations} = this.props;
     return (
       <Map
       google = {this.props.google}
       zoom = {14}
       style = {mapStyles}
       initialCenter = {{lat: 34.052235, lng: -118.243683}}>
-      <Marker onClick = {this.onMarkerClick}
-        name = {'Kenyatta International Convention Centre'}/>
+          {
+            locations.map((location,idx) => {
+              const { point, name } = location;
+              const [lng, lat] = point;
+              return <Marker
+                  key={idx}
+                  onClick = {this.onMarkerClick}
+                  position = {{ lat, lng }}
+                  name = {name}
+              />
+            })
+          }
+          {/*<Marker*/}
+            {/*onClick = {this.onMarkerClick}*/}
+            {/*position = {{ lat: 34.052235, lng: -118.243683 }}*/}
+            {/*name = {'Kenyatta International Convention Centre'}*/}
+          {/*/>*/}
+          {/*<Marker*/}
+              {/*onClick = {this.onMarkerClick}*/}
+              {/*position = {{ lat: 34.052235, lng: -118.244883 }}*/}
+              {/*name = {'Kenyatta International Convention Centre'}*/}
+          {/*/>*/}
+
+
         <InfoWindow
         marker = {
           this.state.activeMarker
