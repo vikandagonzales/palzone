@@ -7,7 +7,7 @@ import {
   USER_SIGNUP_FAILED,
   USER_LOGOUT,
   USER_VERIFY
-} from "../actions/auth.actions";
+} from "../actions/auth";
 
 let initialState = {
   user: {},
