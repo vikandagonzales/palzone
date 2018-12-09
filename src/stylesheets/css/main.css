@@ -6857,6 +6857,10 @@ label.panel-block {
   .modal-card .select, .modal-card select {
     width: 100%; }
 
+#map-container .hero-body {
+  align-items: flex-start;
+  padding: 1rem; }
+
 .pointer {
   cursor: pointer; }
 

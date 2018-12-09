@@ -22,7 +22,7 @@ class Profile extends React.Component {
               <div className="columns">
                 <div className="column is-4 is-offset-4">
                   <figure className="image has-padding-bottom">
-                    <img src="https://cdn.shopify.com/s/files/1/1362/5949/articles/1-furbo-feature_1000x.jpg?v=1540217003" alt="Lisa Baker" />
+                    <img className="img-round" src="https://cdn.shopify.com/s/files/1/1362/5949/articles/1-furbo-feature_1000x.jpg?v=1540217003" alt="Lisa Baker" />
                   </figure>
                   <div className="has-text-centered has-padding-bottom">
                     <p className="title">Lisa Baker</p>

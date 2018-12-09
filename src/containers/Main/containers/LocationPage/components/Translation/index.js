@@ -13,10 +13,16 @@ class Translation extends React.Component {
     this.props.getLanguages();
   }
 
+  translate = event => {
+    event.preventDefault();
+    this.props.translate();
+    this.props.toggle();
+  }
+
   render () {
     return (
       <div className="translation">
-        <form className="has-text-centered" onSubmit={event => {this.props.translate(event)}}>
+        <form className="has-text-centered" onSubmit={this.translate}>
           <div className="control has-margin-bottom">
             <div className="select">
               <select>

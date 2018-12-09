@@ -9,20 +9,13 @@ import { connect } from 'react-redux';
 // ==========
 
 class TippingEtiquette extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      tip: 'aSDha alsdlash  asdhahsd lshdahsd ad ahsdahld as da sdahdlad ads da das dhasd as da sdhasdl adh a asdhasd lahsdl adshaldha sdlada.'
-    }
-  };
-
   render () {
     return (
       <div className="tipping">
-        <p>
-          {this.state.tip}
-        </p>
-        <p className="help is-primary has-text-right pointer" onClick={this.props.toggle} text={this.state.tip}>View translation</p>
+        <ul>
+          <li><strong>Tip Description:</strong> 15% - 20%</li>
+          <li><strong>Country Name:</strong> United States</li>
+        </ul>
       </div>
     );
   };

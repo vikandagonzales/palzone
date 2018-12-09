@@ -13,11 +13,11 @@ class Filter extends React.Component {
     return (
       <div className="filter has-margin-bottom">
         <div className="tags">
-          <span className="tag">Attractions</span>
-          <span className="tag">Hotels</span>
-          <span className="tag">Restaurants</span>
-          <span className="tag">Retail</span>
-          <span className="tag">Transportation</span>
+          <span className="tag">attractions</span>
+          <span className="tag">hotels</span>
+          <span className="tag">restaurants</span>
+          <span className="tag">retail</span>
+          <span className="tag">transportation</span>
         </div>
       </div>     
     );

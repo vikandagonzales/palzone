@@ -9,18 +9,11 @@ import { connect } from 'react-redux';
 // ==========
 
 class Review extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      review: 'aSDha alsdlash  asdhahsd lshdahsd ad ahsdahld as da sdahdlad ads da das dhasd as da sdhasdl adh a asdhasd lahsdl adshaldha sdlada.'
-    }
-  };
-
   render () {
     return (
       <div className="review">
         <div>
-          <span className="title is-5">Nice atmosphere</span>
+          <span className="title is-5">Great food!</span>
           <div className="is-pulled-right">
             <i className="fas fa-star"></i>
             <i className="fas fa-star"></i>
@@ -31,9 +24,9 @@ class Review extends React.Component {
         </div>
         <p className="subtitle is-7">Nora Mirror</p>
         <p>
-          {this.state.review}
+          {this.props.review}
         </p>
-        <p className="help is-primary has-text-right pointer" onClick={this.props.toggle} text={this.state.review}>View translation</p>
+        <p className="help is-primary has-text-right pointer" onClick={this.props.toggle}>View translation</p>
       </div>
     );
   };

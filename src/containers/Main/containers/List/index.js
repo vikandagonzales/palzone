@@ -33,18 +33,15 @@ class List extends React.Component {
                   <Search />
                   <Filter />
                   <ul>
-                    <li>
-                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
-                    </li>
-                    <li>
-                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
-                    </li>
-                    <li>
-                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
-                    </li>
-                    <li>
-                      <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
-                    </li>
+                    {
+                      this.props.locations.map((location, i) => {
+                        return (
+                          <li key={i}>
+                            <Link to="/main/location-page" className="pointer"><LocationSummary location={location}/></Link>
+                          </li>
+                        );
+                      })
+                    }
                   </ul>
                 </div>
               </div>

@@ -13,14 +13,14 @@ import { connect } from 'react-redux';
 import GoogleMap from './components/GoogleMap';
 import Search from '../../components/Search';
 import Filter from '../../components/Filter';
-import LocationSummary from '../../components/LocationSummary';
+// import LocationSummary from '../../components/LocationSummary';
 
 // ==========
 
 class Map extends React.Component {
   render () {
     return (
-      <div id="list">
+      <div id="map-container">
         <section className="hero is-fullheight is-bold is-light">
           <div className="hero-body">
             <div className="container">
@@ -29,7 +29,7 @@ class Map extends React.Component {
                   <GoogleMap />
                   <Search />
                   <Filter />                 
-                  <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>
+                  {/* <Link to="/main/location-page" className="pointer"><LocationSummary /></Link> */}
                 </div>
               </div>
             </div>   
