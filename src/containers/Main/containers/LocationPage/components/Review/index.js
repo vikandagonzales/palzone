@@ -26,7 +26,7 @@ class Review extends React.Component {
         <p>
           aSDha alsdlash  asdhahsd lshdahsd ad ahsdahld as da sdahdlad ads da das dhasd as da sdhasdl adh a asdhasd lahsdl adshaldha sdlada.
         </p>
-        <p className="help is-primary has-text-right">View translation</p>
+        <p className="help is-primary has-text-right pointer" onClick={this.props.toggle}>View translation</p>
       </div>
     );
   };

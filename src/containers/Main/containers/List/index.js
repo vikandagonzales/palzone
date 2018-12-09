@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 // REDUX
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-// import { logout } from '../../state/actions/auth';
+import { getLocations } from '../../../../state/actions/main';
 
 // COMPONENTS
 import Search from '../../components/Search';
@@ -17,7 +17,12 @@ import LocationSummary from '../../components/LocationSummary';
 // ==========
 
 class List extends React.Component {
+  componentDidMount () {
+    this.props.getLocations();
+  };
+
   render () {
+    console.log(this.props.locations)
     return (
       <div id="list">
         <section className="hero is-fullheight is-bold is-light">
@@ -52,11 +57,11 @@ class List extends React.Component {
 };
 
 const mapStateToProps = state => ({
-
+  locations: state.main.locations
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  // logout
+  getLocations
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(List);

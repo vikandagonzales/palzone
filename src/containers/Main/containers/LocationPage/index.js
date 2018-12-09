@@ -4,15 +4,43 @@ import React from 'react';
 // REDUX
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-// import { logout } from '../../state/actions/auth';
+import { postTranslation } from '../../../../state/actions/main';
 
 // COMPONENTS
 // import Offer from './components/Offer';
+import TippingEtiquette from './components/TippingEtiquette';
 import Review from './components/Review';
+import Translation from './components/Translation';
 
 // ==========
 
 class LocationPage extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      modal: false,
+      modalClasses: 'modal'
+    };
+  };
+
+  toggle = event => {
+    if (!this.state.modal) {
+      this.setState({
+        modal: true,
+        modalClasses: this.state.modalClasses + ' is-active'
+      });
+    } else {
+      this.setState({
+        modal: false,
+        modalClasses: 'modal'
+      });
+    }
+  };
+
+  translate = event => {
+
+  }
+
   render () {
     return (
       <div className="location-page">
@@ -44,23 +72,27 @@ class LocationPage extends React.Component {
                   </div> */}
                   <div className="has-padding-top has-padding-bottom">
                     <p className="location-header has-margin-bottom"><span className="lnr lnr-cash-dollar"></span>Tipping Etiquette</p>
-                    <p>
-                      Adasd asda sd a sd asd a d asd a sd asdad adsad fgvfvbxc aasfqweq zxvzxcz asdasd qweqweq asdad.
-                    </p>
-                    <p className="help is-primary has-text-right">View translation</p>
+                    <TippingEtiquette toggle={this.toggle} translate={this.translate} />
                   </div>
                   <div className="has-padding-top">
                     <p className="location-header"><span className="lnr lnr-quote-open"></span>Reviews</p>
-                    <Review />
-                    <Review />
-                    <Review />
-                    <Review />
+                    <Review toggle={this.toggle} translate={this.translate} />
+                    <Review toggle={this.toggle} translate={this.translate} />
+                    <Review toggle={this.toggle} translate={this.translate} />
+                    <Review toggle={this.toggle} translate={this.translate} />
                   </div>
                 </div>
               </div>
             </div>
           </div>        
-        </section>     
+        </section>   
+        <div className={this.state.modalClasses}>
+          <div className="modal-background" onClick={this.toggle}></div>
+          <div className="modal-card">
+            <Translation />
+          </div>
+          <button className="modal-close is-large" onClick={this.toggle}></button>
+        </div>  
       </div>
     );
   };

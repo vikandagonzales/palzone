@@ -6849,6 +6849,14 @@ label.panel-block {
     background-color: #dfced2;
     color: white; }
 
+.modal-card {
+  width: 90%;
+  max-width: 400px;
+  background-color: white;
+  padding: 2rem; }
+  .modal-card .select, .modal-card select {
+    width: 100%; }
+
 .pointer {
   cursor: pointer; }
 

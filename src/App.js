@@ -2,7 +2,7 @@
 import React from 'react';
 
 // ROUTER
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 // CONTAINERS
 import Landing from './containers/Landing';
