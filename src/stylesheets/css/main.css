@@ -6786,7 +6786,8 @@ label.panel-block {
   height: 200px; }
 
 #list .hero-body {
-  align-items: flex-start; }
+  align-items: flex-start;
+  padding: 1rem; }
 
 #list li:not(:last-child) {
   border-bottom: 1px solid #dbdbdb; }
@@ -6810,6 +6811,11 @@ label.panel-block {
 
 #list .title, .location-page .title {
   margin-bottom: .25rem; }
+
+.location-page .columns {
+  margin: 0; }
+  .location-page .columns .column {
+    padding: 0; }
 
 .location-page .location-info {
   padding: 2rem; }

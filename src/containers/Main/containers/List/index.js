@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 // import { logout } from '../../state/actions/auth';
 
 // COMPONENTS
+import Search from '../../components/Search';
 import LocationSummary from '../../components/LocationSummary';
 
 // ==========
@@ -23,6 +24,7 @@ class List extends React.Component {
             <div className="container">
               <div className="columns">
                 <div className="column is-4 is-offset-4">
+                  <Search />
                   <ul>
                     <li>
                       <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>

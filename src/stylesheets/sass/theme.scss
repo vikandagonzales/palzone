@@ -56,6 +56,7 @@
 #list {
   .hero-body {
     align-items: flex-start;
+    padding: 1rem;
   }
 
   li:not(:last-child) {
@@ -93,6 +94,14 @@
 }
 
 .location-page {
+  .columns {
+    margin: 0;
+
+    .column {
+      padding: 0;
+    }
+  }
+
   .location-info {
     padding: 2rem;
   }
