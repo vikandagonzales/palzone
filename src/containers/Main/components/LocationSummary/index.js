@@ -20,7 +20,7 @@ class LocationSummary extends React.Component {
                 <i className="fab fa-cc-discover discover-icon is-pulled-right"></i>
               </p>
               <div>
-                <span className="subtitle is-6">Attraction</span>
+                <span className="tag is-dark">Attractions</span>
                 <div className="is-pulled-right">
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>

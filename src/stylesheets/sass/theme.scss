@@ -64,7 +64,11 @@
   }
 
   .location-summary {
-    padding: 1rem;
+    padding: 1rem .5rem;
+
+    .column {
+      padding: 1rem .5rem;
+    }
   }
 
   img {
@@ -134,4 +138,15 @@
 
 .review:not(:last-child) {
   border-bottom: 1px dotted $grey-light;
+}
+
+.filter {
+  .tag {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $champagne;
+      color: $white;
+    }
+  }
 }

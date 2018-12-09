@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 
 // COMPONENTS
 import Search from '../../components/Search';
+import Filter from '../../components/Filter';
 import LocationSummary from '../../components/LocationSummary';
 
 // ==========
@@ -25,6 +26,7 @@ class List extends React.Component {
               <div className="columns">
                 <div className="column is-4 is-offset-4">
                   <Search />
+                  <Filter />
                   <ul>
                     <li>
                       <Link to="/main/location-page" className="pointer"><LocationSummary /></Link>

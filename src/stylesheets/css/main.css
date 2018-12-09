@@ -6793,7 +6793,9 @@ label.panel-block {
   border-bottom: 1px solid #dbdbdb; }
 
 #list .location-summary {
-  padding: 1rem; }
+  padding: 1rem .5rem; }
+  #list .location-summary .column {
+    padding: 1rem .5rem; }
 
 #list img {
   width: 75px;
@@ -6840,6 +6842,12 @@ label.panel-block {
 
 .review:not(:last-child) {
   border-bottom: 1px dotted #b5b5b5; }
+
+.filter .tag {
+  cursor: pointer; }
+  .filter .tag:hover {
+    background-color: #dfced2;
+    color: white; }
 
 .pointer {
   cursor: pointer; }

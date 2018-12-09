@@ -29,7 +29,7 @@ class LocationPage extends React.Component {
                     <i className="fab fa-cc-discover discover-icon is-pulled-right"></i>
                   </p>
                   <div className="has-padding-bottom">
-                    <span className="subtitle is-5">Attraction</span>
+                    <span className="tag is-dark">Attraction</span>
                     <div className="is-pulled-right">
                       <i className="fas fa-star"></i>
                       <i className="fas fa-star"></i>
